@@ -1,0 +1,215 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cabecalho{
+    display: inline;
+    color: black;
+    font-weight: bold;
+}
+
+.itens{
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 10px;
+}
+
+.item-cabecalho{
+    display: inline;
+    margin-left: 14px;
+   
+}
+.item-cabecalho:last-child{
+    display: inline;
+    margin-left: 900px;
+    margin-right: 5px;
+    color: purple;
+}
+
+.container-primeira-sessao{
+    height: 550px;
+    background-image: url('/img/background-img-purple.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 150px 150px 200px auto 150px 150px 70px;
+    grid-template-rows: 100px auto 100px;
+}
+
+.texto-primeira-sessao{
+    color: white;
+    font-weight: bold;
+
+    grid-column-start: 2;
+    grid-column-end:4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.texto-primeira-sessao p:first-child{
+    font-size: 45px;
+    line-height: 55px;
+    background:rgba(46, 49, 49, 0.5);
+    padding:5px;
+    border-radius: 10px;
+}
+
+.texto-primeira-sessao p:last-child{
+    font-size: 20px;
+    line-height:27px;
+    background:rgba(46, 49, 49, 0.5);
+    padding:5px;
+    border-radius: 10px;
+}
+
+.formulario-primeira-sessao{
+    color: black;
+    background:white;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    
+
+    display: flex;
+    flex-direction: column;
+
+    grid-column-start: 5;
+    grid-column-end:7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.formulario-titulo{
+    font-size:20px;
+    margin: 5px 10px 85px 10px ;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: grey;
+  }
+
+input[type=text]:focus {
+    transition: none;
+}
+
+.formulario-input[type="number"]{
+    border: none;
+    border-bottom: 2px solid grey;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.formulario-input:focus{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: grey;
+    outline: none;
+}
+
+.formulario-botao{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    background:rgba(143, 35, 214);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin: 35px 0px 35px 0px;
+}
+
+.formulario-botao:hover{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    background:rgba(143, 35, 214);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.container-segunda-sessao{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px 100px 100px 100px;
+}
+
+.nubank-logo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    margin-left: 170px;
+}
+
+.easyinvest-logo{
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.texto-segunda-sessao{
+    grid-column-start: 3;
+    grid-column-end:5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.texto-segunda-sessao p:first-child{
+    color: black;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+}
+
+.texto-segunda-sessao p:nth-child(3){
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height:27px;
+}
+
+.texto-segunda-sessao p:last-child{
+    color: rgba(143, 35, 214);
+    font-weight: bold;
+    font-size: 16px;
+    transition: 2s;
+}
+
+.texto-segunda-sessao-link::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(143, 35, 214);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.texto-segunda-sessao-link:hover::before{
+    visibility: visible;
+    width: 100%;
+}
