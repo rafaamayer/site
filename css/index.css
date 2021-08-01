@@ -1,33 +1,49 @@
 html{
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: auto;
 }
 
 /*Cabeçalho do site*/
 
+header{height: 50px;}
+
 .cabecalho{
     display: inline;
+    grid-area: cabecalho;
     color: black;
     font-weight: bold;
 }
 
 .itens{
-    display: flex;
-    justify-content: flex-start;
-    margin: 10px 10px;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 50% ;
+    grid-template-rows: 50px;
+
+    justify-items: start;
+    align-items: center;
+}
+
+.nubank-logo-cabecalho{
+    height: 100%;
+    width: 100%;
 }
 
 .item-cabecalho{
     display: inline;
     margin-left: 14px;
+    flex-grow: 10;
    
 }
 
 .item-cabecalho:last-child{
     display: inline;
-    margin-left: 900px;
-    margin-right: 5px;
+    margin-right: 10%;
     color: purple;
+    justify-self: end;
 }
+
+/*Conteudo do banner principal*/
 
 .container-primeira-sessao{
     height: 550px;
@@ -36,19 +52,21 @@ html{
     background-attachment: fixed;
     background-size: cover;
 
-    display: grid;
-    grid-template-columns: 150px 150px 200px auto 150px 150px 70px;
-    grid-template-rows: 100px auto 100px;
+    display: grid;       
+    /*grid-template-columns: 150px 150px 200px auto 150px 150px 70px;*/
+    grid-template-columns: 10% 10% 20% auto 10% 15% 10%;
+    grid-template-rows: 25% 25% 25% 25%;
 }
 
 .texto-primeira-sessao{
     color: white;
     font-weight: bold;
+    margin-top: 25%;
 
     grid-column-start: 2;
     grid-column-end:4;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
 }
 
 .texto-primeira-sessao p:first-child{
@@ -67,15 +85,16 @@ html{
     border-radius: 10px;
 }
 
+/*Formulário do banner*/
+
 .formulario-primeira-sessao{
     color: black;
     background:white;
     font-weight: bold;
-    margin-top: 70px;
     margin-bottom: 80px;
     padding: 10px;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
     height: 300px;
     
 
@@ -85,7 +104,7 @@ html{
     grid-column-start: 5;
     grid-column-end:7;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 4;
 }
 
 .formulario-titulo{
@@ -152,9 +171,10 @@ input[type=text]:focus {
 /*Conteudo principal*/
 
 .container-segunda-sessao{
+    height: 500px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-rows: 25% 25% 25% 25%;
 }
 
 .nubank-logo{
@@ -220,9 +240,10 @@ input[type=text]:focus {
 }
 
 .rodape{
+    height: 500px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: 40% 40% 20%;
 
     justify-items: center;
     align-items: center;
@@ -244,10 +265,6 @@ input[type=text]:focus {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .lista-produtos{
@@ -298,3 +315,29 @@ input[type=text]:focus {
     grid-column-start: 4;
     grid-column-end: 5;
 }
+
+.nubank-logo-rodape{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    width: 75%;
+    height: 100%;
+    color: white;
+    
+}
+
+.texto-rodape{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    justify-self: start;
+    color: white;
+    margin-left: 25%;
+
+}
+
+
