@@ -2,6 +2,8 @@ html{
     font-family: 'Montserrat', sans-serif;
 }
 
+/*Cabeçalho do site*/
+
 .cabecalho{
     display: inline;
     color: black;
@@ -19,6 +21,7 @@ html{
     margin-left: 14px;
    
 }
+
 .item-cabecalho:last-child{
     display: inline;
     margin-left: 900px;
@@ -146,6 +149,8 @@ input[type=text]:focus {
     cursor: pointer;
 }
 
+/*Conteudo principal*/
+
 .container-segunda-sessao{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -212,4 +217,84 @@ input[type=text]:focus {
 .texto-segunda-sessao-link:hover::before{
     visibility: visible;
     width: 100%;
+}
+
+.rodape{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 200px 200px 200px;
+
+    justify-items: center;
+    align-items: center;
+
+    background-color: #111111;
+}
+
+.lista-titulo{
+    color: white;
+}
+
+.lista-item{
+    color: white;
+    font-weight:bold;
+}
+
+.lista-nubank{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.lista-produtos{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.lista-explore{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.lista-veja{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.lista-transparencia{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.lista-ouvidoria{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.lista-contato{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.lista-app{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
