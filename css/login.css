@@ -1,0 +1,74 @@
+.login{
+    background: var(--color--main);
+}
+
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 25%;
+    padding: 2%;
+    border-radius: 10px;
+    background: white;
+}
+.nubank-logo-login{
+    width: 20%;
+    align-self: center;
+}
+.formulario-login-titulo{
+    padding: 1%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+.formulario-login-input{
+    border: none;
+    border-bottom: 2px solid grey;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+input[type=password]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: grey;
+  }
+
+.formulario-login-input[type="password"]{
+    border: none;
+    border-bottom: 2px solid grey;
+    margin: 0px 10px;
+}
+
+.formulario-login-input:focus{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: grey;
+    outline: none;
+}
+
+input[type=text]:focus {
+    transition: none;
+}
+
+.formulario-login-botao{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    background:var(--color--main);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin: 35px 0px 5px 0px;
+}
+
+.formulario-login-botao:hover{
+    cursor: pointer;
+}

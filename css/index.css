@@ -6,7 +6,15 @@ html{
 
 /*Cabeçalho do site*/
 
+:root{
+    --color--main: rgba(143, 35, 214);
+}
+
 header{height: 50px;}
+
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
 
 .cabecalho{
     display: inline;
@@ -17,7 +25,7 @@ header{height: 50px;}
 
 .itens{
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 50% ;
+    grid-template-columns: 10% 10% 10% 10% 10% auto 10% 10% ;
     grid-template-rows: 50px;
 
     justify-items: start;
@@ -27,20 +35,43 @@ header{height: 50px;}
 .nubank-logo-cabecalho{
     height: 100%;
     width: 100%;
+    display: inline;
 }
 
 .item-cabecalho{
-    display: inline;
+    display: grid;
     margin-left: 14px;
-    flex-grow: 10;
-   
 }
 
-.item-cabecalho:last-child{
-    display: inline;
-    margin-right: 10%;
-    color: purple;
-    justify-self: end;
+.item-cabecalho-login{
+    color: var(--color--main);
+    
+    grid-column-start: 7;
+    grid-column-end:8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: end;  
+}
+
+.item-cabecalho-login::after {
+    content: "";
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--color--main);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: opacity 300ms, transform 300ms ease;
+    z-index: -1;
+}
+  
+.item-cabecalho-login:hover:after {
+    opacity: 1;
+    background-color: var(--color--main);
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 /*Conteudo do banner principal*/
@@ -149,7 +180,7 @@ input[type=text]:focus {
     font-size: 15px;
     font-weight: bold;
     font-family: 'Montserrat';
-    background:rgba(143, 35, 214);
+    background:var(--color--main);
     padding: 10px;
     border-radius: 20px;
     border: none;
@@ -161,7 +192,7 @@ input[type=text]:focus {
     font-size: 15px;
     font-weight: bold;
     font-family: 'Montserrat';
-    background:rgba(143, 35, 214);
+    background:var(--color--main);
     padding: 10px;
     border-radius: 20px;
     border: none;
@@ -215,28 +246,31 @@ input[type=text]:focus {
 }
 
 .texto-segunda-sessao p:last-child{
-    color: rgba(143, 35, 214);
+    color: var(--color--main);
     font-weight: bold;
     font-size: 16px;
     transition: 2s;
 }
 
-.texto-segunda-sessao-link::before{
+.texto-segunda-sessao-link::after{
     content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
+    position: relative;
     bottom: 0;
     left: 0;
-    background-color: rgba(143, 35, 214);
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--color--main);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: opacity 300ms, transform 300ms ease;
 }
 
-.texto-segunda-sessao-link:hover::before{
-    visibility: visible;
-    width: 100%;
+.texto-segunda-sessao-link:hover::after{
+    opacity: 1;
+    background-color: var(--color--main);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    cursor: pointer;
 }
 
 .rodape{
@@ -339,5 +373,3 @@ input[type=text]:focus {
     margin-left: 25%;
 
 }
-
-
