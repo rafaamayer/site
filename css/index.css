@@ -1,6 +1,5 @@
 html{
     font-family: 'Montserrat', sans-serif;
-    width: 100%;
     height: auto;
 }
 
@@ -10,15 +9,15 @@ html{
     --color--main: rgba(143, 35, 214);
 }
 
-header{height: 50px;}
+header{
+    height: 50px;
+}
 
-a, a:hover, a:active, a:visited, a:focus {
+a, a:active, a:visited {
     text-decoration:none;
 }
 
 .cabecalho{
-    display: inline;
-    grid-area: cabecalho;
     color: black;
     font-weight: bold;
 }
@@ -77,14 +76,14 @@ a, a:hover, a:active, a:visited, a:focus {
 /*Conteudo do banner principal*/
 
 .container-primeira-sessao{
-    height: 550px;
+    padding-bottom: 25px;
+    min-height: 550px;
     background-image: url('/img/background-img-purple.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 
     display: grid;       
-    /*grid-template-columns: 150px 150px 200px auto 150px 150px 70px;*/
     grid-template-columns: 10% 10% 20% auto 10% 15% 10%;
     grid-template-rows: 25% 25% 25% 25%;
 }
@@ -92,17 +91,17 @@ a, a:hover, a:active, a:visited, a:focus {
 .texto-primeira-sessao{
     color: white;
     font-weight: bold;
-    margin-top: 25%;
+    max-width: 400px;
 
     grid-column-start: 2;
     grid-column-end:4;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 5;
 }
 
 .texto-primeira-sessao p:first-child{
     font-size: 45px;
-    line-height: 55px;
+    line-height: 53px;
     background:rgba(46, 49, 49, 0.5);
     padding:5px;
     border-radius: 10px;
@@ -114,6 +113,7 @@ a, a:hover, a:active, a:visited, a:focus {
     background:rgba(46, 49, 49, 0.5);
     padding:5px;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 /*Formulário do banner*/
@@ -122,11 +122,11 @@ a, a:hover, a:active, a:visited, a:focus {
     color: black;
     background:white;
     font-weight: bold;
-    margin-bottom: 80px;
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    height: 300px;
+    max-width: 350px;
+    height: 255px;
     
 
     display: flex;
@@ -140,7 +140,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .formulario-titulo{
     font-size:20px;
-    margin: 5px 10px 85px 10px ;
+    margin: 5px 10px 50px 10px ;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -229,6 +229,7 @@ input[type=text]:focus {
     grid-column-end:5;
     grid-row-start: 2;
     grid-row-end: 4;
+    max-width: 700px;
 }
 
 .texto-segunda-sessao p:first-child{
@@ -274,15 +275,16 @@ input[type=text]:focus {
 }
 
 .rodape{
-    height: 500px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 40% 40% 20%;
 
-    justify-items: center;
-    align-items: center;
-
     background-color: #111111;
+}
+
+.rodape > ul {
+    padding-top: 10%;
+    padding-left: 25%;
 }
 
 .lista-titulo{
@@ -365,11 +367,11 @@ input[type=text]:focus {
 .texto-rodape{
     grid-row-start: 3;
     grid-row-end: 4;
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: 4;
 
     justify-self: start;
+    align-self: center;
     color: white;
-    margin-left: 25%;
 
 }
