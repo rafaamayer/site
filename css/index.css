@@ -380,7 +380,7 @@ input[type=text]:focus {
 }
 
 /*Media Queries*/
-@media (max-width: 425px){
+@media (max-width: 767px){
     .container-primeira-sessao{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -389,13 +389,22 @@ input[type=text]:focus {
     }
 
     .texto-primeira-sessao{
-       place-self: center;
+        place-self: center;
         grid-column-start: 1;
         grid-column-end:3;
         grid-row-start: 2;
         grid-row-end: 3;
 
         margin: 0 10px;
+    }
+    .texto-primeira-sessao p:first-child{
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    
+    .texto-primeira-sessao p:last-child{
+        font-size: 1em;
+        line-height: 1.5em;
     }
 
     .formulario-primeira-sessao{
