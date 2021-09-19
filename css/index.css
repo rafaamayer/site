@@ -24,9 +24,8 @@ a, a:active, a:visited {
 
 .itens{
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% auto 10% 10% ;
+    grid-template-columns: 10vw 15vw 15vw 15vw 15vw auto 10vw 10vw;
     grid-template-rows: 50px;
-
     justify-items: start;
     align-items: center;
 }
@@ -43,7 +42,7 @@ a, a:active, a:visited {
 
 .item-cabecalho{
     display: grid;
-    margin-left: 14px;
+    justify-self: stretch;
 }
 
 .item-cabecalho-login{
