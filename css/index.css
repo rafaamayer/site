@@ -205,7 +205,6 @@ input[type=text]:focus {
 /*Conteudo principal*/
 
 .container-segunda-sessao{
-    height: 500px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
@@ -217,7 +216,7 @@ input[type=text]:focus {
     grid-row-start: 2;
     grid-row-end: 4;
 
-    margin-left: 170px;
+    justify-self: center;
 }
 
 .easyinvest-logo{
@@ -447,5 +446,47 @@ input[type=text]:focus {
         border:none;
         border-radius: 20px;
         padding: 10px;
+    }
+
+    .container-segunda-sessao{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 75%;
+    }
+
+    .nubank-logo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .easyinvest-logo{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .texto-segunda-sessao{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    .texto-segunda-sessao p:first-child{
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    
+    .texto-segunda-sessao p:nth-child(3){
+        font-size: 1em;
+        line-height:1.5em;
     }
 }
