@@ -87,7 +87,7 @@ a, a:active, a:visited {
     background-size: cover;
 
     display: grid;       
-    grid-template-columns: 10% 10% 20% auto 10% 15% 10%;
+    grid-template-columns: 10% 10% 30% auto 10% 15% 10%;
     grid-template-rows: 25% 25% 25% 25%;
 }
 
