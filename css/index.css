@@ -37,6 +37,10 @@ a, a:active, a:visited {
     display: inline;
 }
 
+.collapsable{
+    display: none;
+}
+
 .item-cabecalho{
     display: grid;
     margin-left: 14px;
@@ -391,10 +395,13 @@ input[type=text]:focus {
         grid-column-end:3;
         grid-row-start: 2;
         grid-row-end: 3;
+
+        margin: 0 10px;
     }
 
     .formulario-primeira-sessao{
         width:inherit ;
+        margin: 0 10px;
 
         place-self: center;
         grid-column-start: 1;
