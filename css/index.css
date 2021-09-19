@@ -24,9 +24,8 @@ a, a:active, a:visited {
 
 .itens{
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% auto 10% 10% ;
+    grid-template-columns: 10vw 15vw 15vw 15vw 15vw auto 10vw 10vw;
     grid-template-rows: 50px;
-
     justify-items: start;
     align-items: center;
 }
@@ -37,9 +36,13 @@ a, a:active, a:visited {
     display: inline;
 }
 
+.collapsable{
+    display: none;
+}
+
 .item-cabecalho{
     display: grid;
-    margin-left: 14px;
+    justify-self: stretch;
 }
 
 .item-cabecalho-login{
@@ -84,7 +87,7 @@ a, a:active, a:visited {
     background-size: cover;
 
     display: grid;       
-    grid-template-columns: 10% 10% 20% auto 10% 15% 10%;
+    grid-template-columns: 10% 10% 30% auto 10% 15% 10%;
     grid-template-rows: 25% 25% 25% 25%;
 }
 
@@ -374,4 +377,75 @@ input[type=text]:focus {
     align-self: center;
     color: white;
 
+}
+
+/*Media Queries*/
+@media (max-width: 767px){
+    .container-primeira-sessao{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        min-height: 800px;
+    }
+
+    .texto-primeira-sessao{
+        place-self: center;
+        grid-column-start: 1;
+        grid-column-end:3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        margin: 0 10px;
+    }
+    .texto-primeira-sessao p:first-child{
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    
+    .texto-primeira-sessao p:last-child{
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .formulario-primeira-sessao{
+        width:inherit ;
+        margin: 0 10px;
+
+        place-self: center;
+        grid-column-start: 1;
+        grid-column-end:3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .itens{
+        grid-template-columns: 25% 50% 25%;
+    }
+    .item-cabecalho, .item-cabecalho-login{
+        margin:0;
+        display: none;
+    }
+
+    .nubank-logo-cabecalho{
+        grid-column-start: 1;
+        grid-column-end:2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .collapsable{
+        display: inline;
+        grid-column-start: 3;
+        grid-column-end:4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        place-self: center;
+
+        color: white;
+        font-weight: bold;
+        background: var(--color--main);
+        border:none;
+        border-radius: 20px;
+        padding: 10px;
+    }
 }
