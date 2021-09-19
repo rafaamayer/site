@@ -417,4 +417,20 @@ input[type=text]:focus {
         grid-row-start: 1;
         grid-row-end: 2;
     }
+
+    .collapsable{
+        display: inline;
+        grid-column-start: 3;
+        grid-column-end:4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        place-self: center;
+
+        color: white;
+        font-weight: bold;
+        background: var(--color--main);
+        border:none;
+        border-radius: 20px;
+        padding: 10px;
+    }
 }
