@@ -382,10 +382,11 @@ input[type=text]:focus {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
+        min-height: 800px;
     }
 
     .texto-primeira-sessao{
-       
+       place-self: center;
         grid-column-start: 1;
         grid-column-end:3;
         grid-row-start: 2;
@@ -395,9 +396,24 @@ input[type=text]:focus {
     .formulario-primeira-sessao{
         width:inherit ;
 
-        align-self: center;
+        place-self: center;
         grid-column-start: 1;
         grid-column-end:3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .itens{
+        grid-template-columns: 25% 50% 25%;
+    }
+    .item-cabecalho, .item-cabecalho-login{
+        margin:0;
+        display: none;
+    }
+
+    .nubank-logo-cabecalho{
+        grid-column-start: 1;
+        grid-column-end:2;
         grid-row-start: 1;
         grid-row-end: 2;
     }
