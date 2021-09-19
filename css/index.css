@@ -208,6 +208,7 @@ input[type=text]:focus {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
+    min-height: 600px;
 }
 
 .nubank-logo{
@@ -286,7 +287,8 @@ input[type=text]:focus {
 
 .rodape > ul {
     padding-top: 10%;
-    padding-left: 25%;
+    padding-left: 5%;
+    line-height: 20px;
 }
 
 .lista-titulo{
@@ -296,6 +298,7 @@ input[type=text]:focus {
 .lista-item{
     color: white;
     font-weight:bold;
+    overflow-wrap: break-word;
 }
 
 .lista-nubank{
@@ -451,6 +454,7 @@ input[type=text]:focus {
     .container-segunda-sessao{
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 75%;
+        min-height: inherit;
     }
 
     .nubank-logo{
@@ -478,6 +482,7 @@ input[type=text]:focus {
         grid-row-end: 3;
         max-width: 100%;
         margin: 0 10px;
+        place-self: center;
     }
 
     .texto-segunda-sessao p:first-child{
@@ -489,4 +494,26 @@ input[type=text]:focus {
         font-size: 1em;
         line-height:1.5em;
     }
+
+    .rodape{
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+    }
+
+    .rodape > ul{
+        padding: 10% 0 10% 5%;
+    }
+
+    .nubank-logo-rodape{
+        width: 25%;
+    }
+
+    .texto-rodape{
+        padding:10px ;
+    }
+}
+
+@media (min-width: 768px) {
+
 }
